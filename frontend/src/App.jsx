@@ -1,15 +1,8 @@
-
-import './App.css'
+import "./index.css";
+import ChicaDocuras from './pages/ChicaDocuras'
 
 function App() {
-
-  return (
-    <>
-      <div className="App">
-        <h1>Confeitaria</h1>
-      </div>
-    </>
-  )
+  return <ChicaDocuras />;
 }
 
-export default App
+export default App;
