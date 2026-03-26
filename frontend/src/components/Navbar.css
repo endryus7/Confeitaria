@@ -1,5 +1,5 @@
 .nav {
-  background: #2c1a0e;
+  background: #6b3020;
   padding: 0 40px;
   display: flex;
   justify-content: center;
@@ -8,21 +8,22 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 20px rgba(44, 26, 14, 0.4);
+  box-shadow: 0 4px 16px rgba(107, 48, 32, 0.35);
   flex-wrap: wrap;
 }
 
 .cat-btn {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 18px 22px;
+  padding: 16px 20px;
   background: none;
   border: none;
-  color: rgba(253, 246, 238, 0.6);
+  color: rgba(255, 245, 247, 0.6);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.25s;
   position: relative;
 }
 
@@ -30,19 +31,19 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 50%;
-  right: 50%;
-  height: 2px;
-  background: #f2c94c;
-  transition: all 0.3s;
+  left: 50%; right: 50%;
+  height: 3px;
+  background: #f4a0b5;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.25s;
 }
 
-.cat-btn:hover        { color: #fdf6ee; }
-.cat-btn:hover::after { left: 20%; right: 20%; }
-.cat-btn.active        { color: #f2c94c; }
-.cat-btn.active::after { left: 20%; right: 20%; }
+.cat-btn:hover        { color: #fff5f7; }
+.cat-btn:hover::after { left: 16%; right: 16%; }
+.cat-btn.active        { color: #f9c8d4; }
+.cat-btn.active::after { left: 16%; right: 16%; }
 
 @media (max-width: 640px) {
-  .nav { padding: 0 10px; justify-content: center; }
-  .cat-btn { padding: 14px 14px; font-size: 0.7rem; }
+  .nav { padding: 0 8px; justify-content: center; }
+  .cat-btn { padding: 12px 12px; font-size: 0.72rem; }
 }

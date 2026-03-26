@@ -7,7 +7,8 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
         <button
           key={cat}
           className={activeCategory === cat ? "cat-btn active" : "cat-btn"}
-          onClick={() => onCategoryChange(cat)}>
+          onClick={() => onCategoryChange(cat)}
+        >
           {cat}
         </button>
       ))}
