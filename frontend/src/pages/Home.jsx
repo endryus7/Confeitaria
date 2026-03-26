@@ -1,12 +1,13 @@
 import { useState } from "react";
-import "./ChicaDocuras.css";
+import "./Home.css";
+import logo from "../assets/images/logo_chica.png";
 import { candies, categories } from "../data/candies";
 import Navbar from "../components/Navbar";
 import CandyCard from "../components/CandyCard";
 
-const WHATSAPP = "555193463155";
+const WHATSAPP = "5551993463155";
 
-export default function ChicaDocuras() {
+export default function DocesPaixao() {
   const [activeCategory, setActiveCategory] = useState("Todos");
 
   const filtered = activeCategory === "Todos"
@@ -14,7 +15,7 @@ export default function ChicaDocuras() {
     : candies.filter(c => c.category === activeCategory);
 
   function handlePedir(nomeDoDoce) {
-    const mensagem = `Olá! Gostaria de fazer um pedido de ${nomeDoDoce}.`;
+    const mensagem = `Olá Chica! Gostaria de fazer um pedido de *${nomeDoDoce}* 🍬`;
     const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, "_blank");
   }
@@ -23,9 +24,17 @@ export default function ChicaDocuras() {
     <div>
 
       <header className="hero">
-        <h1 className="hero-title">Chica <span>Doçuras</span></h1>
-        <div className="deco-line" />
-        <p className="hero-sub">Confeitaria Artesanal — Encomendas pelo WhatsApp</p>
+        <img src={logo} alt="Chica Doçuras" className="hero-logo" />
+        <h1 className="hero-nome">Chica Doçuras</h1>
+        <p className="hero-sub">Doces Caseiros feitos com amor 🍓</p>
+        <a
+          href={`https://wa.me/${WHATSAPP}`}
+          target="_blank"
+          rel="noreferrer"
+          className="hero-whats"
+        >
+          📲 Fazer pedido pelo WhatsApp
+        </a>
       </header>
 
       <Navbar
@@ -50,14 +59,15 @@ export default function ChicaDocuras() {
       </main>
 
       <footer className="footer">
-        <p>Feito com amor 🍫 · Encomendas pelo WhatsApp:<span className="number">51 9346-3155</span></p>
+        <img src={logo} alt="Chica Doçuras" />
+        <p>Chica Doçuras — Doces Caseiros 🍫</p>
         <a
           href={`https://wa.me/${WHATSAPP}`}
           target="_blank"
           rel="noreferrer"
           className="footer-whats"
         >
-          📲 Fale conosco
+          📲 (51) 99346-3155
         </a>
       </footer>
 

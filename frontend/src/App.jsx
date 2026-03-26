@@ -1,5 +1,5 @@
 import "./index.css";
-import ChicaDocuras from './pages/ChicaDocuras'
+import ChicaDocuras from './pages/Home'
 
 function App() {
   return <ChicaDocuras />;
