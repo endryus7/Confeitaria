@@ -18,7 +18,7 @@ export default function CandyCard({ candy, onPedir }) {
             {candy.price.toFixed(2).replace(".", ",")}
           </div>
           <button className="pedir-btn" onClick={() => onPedir(candy.name)}>
-            Pedir
+            📲 Pedir
           </button>
         </div>
       </div>
