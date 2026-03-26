@@ -1,50 +1,84 @@
 /* Hero */
 .hero {
-  background: linear-gradient(160deg, #f9c8d4 0%, #f4a0b5 50%, #e8799a 100%);
-  padding: 50px 40px 40px;
-  text-align: center;
   position: relative;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  overflow: hidden;
   border-bottom: 4px solid #6b3020;
 }
 
+/* Imagem de fundo */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://scontent.fpoa12-1.fna.fbcdn.net/v/t39.30808-6/490348789_4048975805350986_1988742551034791802_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=f798df&_nc_ohc=aPiJtOKYIRYQ7kNvwHWelpL&_nc_oc=Adp281ufFoJ2KulBWNU5qhsidOyNctOK3O6f6pJ7MxaaIvodPXDoxLDywnm-WAvpQJI&_nc_zt=23&_nc_ht=scontent.fpoa12-1.fna&_nc_gid=1F9_sKciKXRSEfD_qrbnEQ&_nc_ss=7a32e&oh=00_AfwNtaaTOgXkJLqaehPP9QdgqvW4Z8eD-LJIJNOMaElhdQ&oe=69CA6B18');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* Overlay texto */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(107, 48, 32, 0.55) 0%,
+    rgba(180, 80, 100, 0.60) 100%
+  );
+}
+
+/* Hero fica na frente da imagem */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .hero-logo {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
-  filter: drop-shadow(0 8px 24px rgba(107, 48, 32, 0.3));
-  margin-bottom: 12px;
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,0.4));
 }
 
 .hero-nome {
   font-family: 'Pacifico', cursive;
   font-size: clamp(2rem, 6vw, 3.5rem);
-  color: #6b3020;
-  text-shadow: 2px 2px 0 rgba(255,255,255,0.4);
-  margin-bottom: 8px;
+  color: #fff;
+  text-shadow: 2px 3px 12px rgba(0,0,0,0.5);
 }
 
 .hero-sub {
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
-  color: #6b3020;
+  color: rgba(255, 245, 247, 0.92);
   font-weight: 600;
   letter-spacing: 1px;
-  opacity: 0.85;
-  margin-bottom: 20px;
 }
 
 .hero-whats {
+  margin-top: 8px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   background: #25d366;
   color: white;
   text-decoration: none;
-  padding: 12px 28px;
+  padding: 13px 30px;
   border-radius: 50px;
   font-weight: 800;
   font-size: 1rem;
-  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   transition: all 0.2s;
 }
 
@@ -124,6 +158,7 @@
 }
 
 @media (max-width: 640px) {
-  .hero { padding: 40px 20px 30px; }
-  .main { padding: 36px 20px; }
+  .hero  { min-height: 340px; padding: 40px 20px; }
+  .main  { padding: 36px 20px; }
+  .hero-logo { width: 120px; height: 120px; }
 }

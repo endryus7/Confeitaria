@@ -1,6 +1,10 @@
+import brigadeiro from "../assets/images/brigadeiro.jpg"
+import beijinho from '../assets/images/beijinho.jpg'
+import branquinho from '../assets/images/branquinho.jpg'
+
 export const categories = [
   "Todos",
-  "Brasileiros",
+  "Brigadeiros Tradicionais",
   "Sobremesas",
   "Bolos",
   "Importados",
@@ -11,25 +15,25 @@ export const candies = [
     id: 1,
     name: "Brigadeiro",
     price: 3.5,
-    image: "",
-    category: "Brasileiros",
+    image: brigadeiro,
+    category: "Brigadeiros Tradicionais",
     desc: "Clássico com chocolate e granulado",
   },
   {
     id: 2,
     name: "Beijinho",
     price: 3.5,
-    image: "",
-    category: "Brasileiros",
+    image: beijinho,
+    category: "Brigadeiros Tradicionais",
     desc: "Coco ralado com leite condensado",
   },
   {
     id: 3,
-    name: "Cajuzinho",
+    name: "Branquinho",
     price: 3.5,
-    image: "",
-    category: "Brasileiros",
-    desc: "Amendoim com açúcar e chocolate",
+    image: branquinho,
+    category: "Brigadeiros Tradicionais",
+    desc: "Clássico com leite condensado",
   },
   {
     id: 4,

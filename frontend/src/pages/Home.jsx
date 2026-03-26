@@ -15,7 +15,7 @@ export default function DocesPaixao() {
     : candies.filter(c => c.category === activeCategory);
 
   function handlePedir(nomeDoDoce) {
-    const mensagem = `Olá Chica! Gostaria de fazer um pedido de *${nomeDoDoce}* 🍬`;
+    const mensagem = `Olá Chica! Gostaria de fazer um pedido de ${nomeDoDoce}`;
     const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
     window.open(url, "_blank");
   }
@@ -24,17 +24,23 @@ export default function DocesPaixao() {
     <div>
 
       <header className="hero">
-        <img src={logo} alt="Chica Doçuras" className="hero-logo" />
-        <h1 className="hero-nome">Chica Doçuras</h1>
-        <p className="hero-sub">Doces Caseiros feitos com amor 🍓</p>
-        <a
-          href={`https://wa.me/${WHATSAPP}`}
-          target="_blank"
-          rel="noreferrer"
-          className="hero-whats"
-        >
-          📲 Fazer pedido pelo WhatsApp
-        </a>
+        {/* Imagem de fundo */}
+        <div className="hero-bg" />
+
+        {/* Conteúdo na frente da imagem */}
+        <div className="hero-content">
+          <img src={logo} alt="Chica Doçuras" className="hero-logo" />
+          <h1 className="hero-nome">Chica Doçuras</h1>
+          <p className="hero-sub">Doces Caseiros feitos com amor 🍓</p>
+          <a
+            href={`https://wa.me/${WHATSAPP}`}
+            target="_blank"
+            rel="noreferrer"
+            className="hero-whats"
+          >
+            📲 Fazer pedido pelo WhatsApp
+          </a>
+        </div>
       </header>
 
       <Navbar
