@@ -10,14 +10,11 @@ export default function Footer() {
         <div className="footer-brand">
           <img src={logo} alt="Chica Doçuras" className="footer-logo" />
           <p>Doces caseiros feitos com amor e ingredientes selecionados. Encomende pelo WhatsApp!</p>
-          <a
-            href={`https://wa.me/${WHATSAPP}`}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-whats"
-          >
-            📲 (51) 99346-3155
-          </a>
+          <div className="btn-footer">
+            <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer" className="btn-whats">
+                📲 (51) 99346-3155
+            </a>
+          </div>
         </div>
 
         <div className="footer-col">
