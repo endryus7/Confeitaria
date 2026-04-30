@@ -22,19 +22,11 @@
 }
 
 .produtos-title {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.8rem;
   font-weight: 900;
   font-style: italic;
   color: #3d0f1e;
-}
-
-.produtos-link {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: #e8799a;
-  border-bottom: 1px solid #f9a8c0;
-  padding-bottom: 1px;
 }
 
 .cats-row {
@@ -53,7 +45,7 @@
   font-size: 0.78rem;
   font-weight: 700;
   cursor: pointer;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   transition: all 0.2s;
 }
 
@@ -83,7 +75,7 @@
 
 .cta-banner-text strong {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.2rem;
   font-style: italic;
   color: #fff;
@@ -97,7 +89,18 @@
 }
 
 @media (max-width: 768px) {
-  .produtos { padding: 40px 20px 28px; }
-  .cta-banner { margin: 0 20px 40px; flex-direction: column; text-align: center; border-radius: 16px; }
-  .produtos-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .produtos {
+    padding: 40px 20px 28px;
+  }
+  .cta-banner {
+    margin: 0 20px 40px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 16px;
+  }
+  .produtos-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }

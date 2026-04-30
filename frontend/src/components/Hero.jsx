@@ -35,16 +35,25 @@ export default function Hero() {
       </div>
 
       <div className="hero-photos">
+        {/* Troque o src pelas suas fotos reais */}
         <div className="hero-photo-main">
           <img
-            src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&q=80"
+            src="/fotos/hero-principal.jpg"
             alt="Doces da Chica"
+            onError={(e) => {
+              e.target.style.display = "none";
+              e.target.parentElement.style.background = "linear-gradient(135deg, #f9a8c0, #e8799a)";
+            }}
           />
         </div>
         <div className="hero-photo-sec">
           <img
-            src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=300&q=80"
+            src="/fotos/hero-secundaria.jpg"
             alt="Bolo da Chica"
+            onError={(e) => {
+              e.target.style.display = "none";
+              e.target.parentElement.style.background = "linear-gradient(135deg, #5c2d0e, #a05e20)";
+            }}
           />
         </div>
         <div className="hero-logo-badge">

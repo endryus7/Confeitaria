@@ -40,7 +40,6 @@ export default function DocesPaixao() {
             <div className="produtos-label">Cardápio</div>
             <h2 className="produtos-title">Nossos Doces</h2>
           </div>
-          <span className="produtos-link">Ver todos →</span>
         </div>
 
         <div className="cats-row">
