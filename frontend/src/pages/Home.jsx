@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./Home.css";
-import logo from "../assets/images/logo_chica.png";
 import { candies, categories } from "../data/candies";
+import Topbar from "../components/Topbar";
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 import CandyCard from "../components/CandyCard";
+import Footer from "../components/Footer";
 
 const WHATSAPP = "5551993463155";
 
@@ -15,33 +17,13 @@ export default function DocesPaixao() {
     : candies.filter(c => c.category === activeCategory);
 
   function handlePedir(nomeDoDoce) {
-    const mensagem = `Olá Chica! Gostaria de fazer um pedido de ${nomeDoDoce}`;
-    const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, "_blank");
+    const msg = `Olá Chica! Gostaria de fazer um pedido de *${nomeDoDoce}* 🍬`;
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
   }
 
   return (
     <div>
-
-      <header className="hero">
-        {/* Imagem de fundo */}
-        <div className="hero-bg" />
-
-        {/* Conteúdo na frente da imagem */}
-        <div className="hero-content">
-          <img src={logo} alt="Chica Doçuras" className="hero-logo" />
-          <h1 className="hero-nome">Chica Doçuras</h1>
-          <p className="hero-sub">Doces Caseiros feitos com amor 🍓</p>
-          <a
-            href={`https://wa.me/${WHATSAPP}`}
-            target="_blank"
-            rel="noreferrer"
-            className="hero-whats"
-          >
-            📲 Fazer pedido pelo WhatsApp
-          </a>
-        </div>
-      </header>
+      <Topbar />
 
       <Navbar
         categories={categories}
@@ -49,12 +31,28 @@ export default function DocesPaixao() {
         onCategoryChange={setActiveCategory}
       />
 
-      <main className="main">
-        <div className="section-header">
-          <h2 className="section-title">
-            {activeCategory === "Todos" ? "Nossos Doces" : activeCategory}
-          </h2>
-          <span className="section-count">{filtered.length} itens</span>
+      <Hero />
+
+      {/* Produtos */}
+      <section className="produtos">
+        <div className="produtos-header">
+          <div>
+            <div className="produtos-label">Cardápio</div>
+            <h2 className="produtos-title">Nossos Doces</h2>
+          </div>
+          <span className="produtos-link">Ver todos →</span>
+        </div>
+
+        <div className="cats-row">
+          {categories.map(cat => (
+            <button
+              key={cat}
+              className={activeCategory === cat ? "cat-pill active" : "cat-pill"}
+              onClick={() => setActiveCategory(cat)}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
 
         <div className="candy-grid">
@@ -62,21 +60,25 @@ export default function DocesPaixao() {
             <CandyCard key={candy.id} candy={candy} onPedir={handlePedir} />
           ))}
         </div>
-      </main>
+      </section>
 
-      <footer className="footer">
-        <img src={logo} alt="Chica Doçuras" />
-        <p>Chica Doçuras — Doces Caseiros 🍫</p>
+      {/* Banner */}
+      <div className="cta-banner">
+        <div className="cta-banner-text">
+          <strong>Encomendas para festas e eventos 🎉</strong>
+          <span>Entre em contato e faça seu pedido personalizado</span>
+        </div>
         <a
           href={`https://wa.me/${WHATSAPP}`}
           target="_blank"
           rel="noreferrer"
-          className="footer-whats"
+          className="btn-whats"
         >
-          📲 (51) 99346-3155
+          📲 Chamar no WhatsApp
         </a>
-      </footer>
+      </div>
 
+      <Footer />
     </div>
   );
 }
