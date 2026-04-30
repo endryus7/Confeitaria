@@ -42,11 +42,9 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Chica Doçuras. Todos os direitos reservados.</p>
-        <div className="footer-socials">
-          <a href="#" className="social-icon">📷</a>
-          <a href="#" className="social-icon">💬</a>
-        </div>
+        <p>
+            © 2026 Chica Doçuras. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
   );
