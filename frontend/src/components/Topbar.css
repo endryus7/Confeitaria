@@ -1,0 +1,14 @@
+.topbar {
+  background: #f9c8d4;
+  padding: 6px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b2737;
+  letter-spacing: 0.3px;
+}
