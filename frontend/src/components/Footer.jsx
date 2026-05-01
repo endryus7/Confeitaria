@@ -31,8 +31,16 @@ export default function Footer() {
           <h4>Contato</h4>
           <ul>
             <li>(51) 99346-3155</li>
-            <li>WhatsApp</li>
-            <li>Instagram</li>
+            <li>
+                <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">
+                    WhatsApp
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/chicamontezano/" target="_blank">
+                    Instagram
+                </a>
+            </li>
             <li>Porto Alegre, RS</li>
           </ul>
         </div>

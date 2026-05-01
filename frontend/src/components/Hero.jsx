@@ -1,5 +1,5 @@
-import Bolo_de_laranja from "../assets/images/Bolo_de_laranja.png";
-import Ovos_de_colher from "../assets/images/Ovos_de_colher.jpeg";
+import Bolo_de_kitkat from "../assets/images/Bolo_de_kitkat.jpeg";
+import Branquinho_com_nutela from "../assets/images/Branquinho_com_nutela.png"
 import "./Hero.css";
 
 const WHATSAPP = "5551993463155";
@@ -36,10 +36,9 @@ export default function Hero() {
       </div>
 
       <div className="hero-photos">
-        {/* Troque o src pelas suas fotos reais */}
         <div className="hero-photo-main">
           <img
-            src={Bolo_de_laranja}
+            src={Bolo_de_kitkat}
             alt="Doces da Chica"
             onError={(e) => {
               e.target.style.display = "none";
@@ -49,7 +48,7 @@ export default function Hero() {
         </div>
         <div className="hero-photo-sec">
           <img
-            src={Ovos_de_colher}
+            src={Branquinho_com_nutela}
             alt="Bolo da Chica"
             onError={(e) => {
               e.target.style.display = "none";

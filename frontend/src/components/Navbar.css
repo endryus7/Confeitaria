@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px 10px;
   background: #fff;
   border-bottom: 1px solid #fce4ec;
@@ -10,7 +10,7 @@
 
 /* Logo */
 .navbar-logo-img {
-  height: 64px;
+  height: 68px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -108,6 +108,7 @@
   .navbar {
     padding: 10px 20px;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 0;
   }
 
