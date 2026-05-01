@@ -20,7 +20,7 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .nav-cat {
@@ -51,6 +51,15 @@
   display: flex;
   align-items: center;
   gap: 7px;
+}
+
+.fa-instagram {
+  font-size: 22px;
+}
+
+.fa-instagram:hover {
+  color: #6b2737;
+  cursor: pointer;
 }
 
 .navbar-phone {
