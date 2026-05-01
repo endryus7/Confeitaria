@@ -2,13 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 40px;
+  padding: 10px 10px;
   background: #fff;
   border-bottom: 1px solid #fce4ec;
   position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(107, 39, 55, 0.06);
 }
 
 /* Logo */
@@ -53,7 +50,7 @@
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 7px;
 }
 
 .navbar-phone {

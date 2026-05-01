@@ -1,4 +1,5 @@
-import logo from "../assets/images/logo_chica.png";
+import Bolo_de_laranja from "../assets/images/Bolo_de_laranja.png";
+import Ovos_de_colher from "../assets/images/Ovos_de_colher.jpeg";
 import "./Hero.css";
 
 const WHATSAPP = "5551993463155";
@@ -38,7 +39,7 @@ export default function Hero() {
         {/* Troque o src pelas suas fotos reais */}
         <div className="hero-photo-main">
           <img
-            src="/fotos/hero-principal.jpg"
+            src={Bolo_de_laranja}
             alt="Doces da Chica"
             onError={(e) => {
               e.target.style.display = "none";
@@ -48,16 +49,13 @@ export default function Hero() {
         </div>
         <div className="hero-photo-sec">
           <img
-            src="/fotos/hero-secundaria.jpg"
+            src={Ovos_de_colher}
             alt="Bolo da Chica"
             onError={(e) => {
               e.target.style.display = "none";
               e.target.parentElement.style.background = "linear-gradient(135deg, #5c2d0e, #a05e20)";
             }}
           />
-        </div>
-        <div className="hero-logo-badge">
-          <img src={logo} alt="Chica Doçuras" />
         </div>
       </div>
     </section>

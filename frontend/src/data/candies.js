@@ -1,6 +1,11 @@
 import brigadeiro from "../assets/images/brigadeiro.jpg"
 import beijinho from '../assets/images/beijinho.jpg'
 import branquinho from '../assets/images/branquinho.jpg'
+import Ovos_de_colher from "../assets/images/Ovos_de_colher.jpeg";
+import Bolo_de_laranja from "../assets/images/Bolo_de_laranja.png";
+import Bolo_de_chocolate from "../assets/images/Bolo_de_chocolate.jpeg";
+import Trufas from "../assets/images/Trufas.jpeg";
+import Ovo_de_colher_morango from "../assets/images/Ovo_de_colher_morango.jpeg"
 
 export const categories = [
   "Todos",
@@ -37,25 +42,25 @@ export const candies = [
   },
   {
     id: 4,
-    name: "Pudim",
+    name: "Bolo de Chocolate",
     price: 12.0,
-    image: "",
-    category: "Sobremesas",
+    image: Bolo_de_chocolate,
+    category: "Bolos",
     desc: "Pudim de leite condensado caramelado",
   },
   {
     id: 5,
-    name: "Bolo de Cenoura",
+    name: "Bolo de Lranja",
     price: 18.0,
-    image: "",
+    image: Bolo_de_laranja,
     category: "Bolos",
-    desc: "Com cobertura de chocolate cremoso",
+    desc: "Com cobertura de ",
   },
   {
     id: 6,
     name: "Macarons",
     price: 7.0,
-    image: "",
+    image: Ovo_de_colher_morango,
     category: "Importados",
     desc: "Franceses com recheios variados",
   },
@@ -63,7 +68,7 @@ export const candies = [
     id: 7,
     name: "Trufa",
     price: 6.0,
-    image: "",
+    image: Trufas,
     category: "Importados",
     desc: "Belga com ganache especial",
   },
