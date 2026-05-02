@@ -6,7 +6,7 @@ const WHATSAPP = "5551993463155";
 
 export default function Hero() {
   function handlePedir() {
-    const msg = "Olá Chica! Gostaria de fazer um pedido 🍬";
+    const msg = "Olá Chica! Gostaria de fazer um pedido ";
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
   }
 

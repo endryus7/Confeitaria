@@ -1,4 +1,4 @@
-/* Seção de Produtos */
+/* Produtos */
 .produtos {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,11 +29,43 @@
   color: #3d0f1e;
 }
 
+.produtos-link {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #e8799a;
+  border-bottom: 1px solid #f9a8c0;
+  padding-bottom: 1px;
+  cursor: pointer;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: "Nunito", sans-serif;
+  transition: color 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.produtos-link:hover {
+  color: #6b2737;
+  border-bottom-color: #6b2737;
+}
+
+/* Controls */
+.produtos-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
 .cats-row {
   display: flex;
   gap: 8px;
-  margin-bottom: 28px;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .cat-pill {
@@ -53,6 +85,32 @@
 .cat-pill.active {
   background: #6b2737;
   color: #fff;
+}
+
+.search-result-info {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #c4819a;
+  margin-bottom: 16px;
+}
+
+.empty-search {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.empty-search span {
+  font-size: 3.5rem;
+}
+
+.empty-search p {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #c4819a;
 }
 
 .candy-grid {
@@ -88,19 +146,44 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
+/* TABLET */
+@media (max-width: 1024px) {
   .produtos {
-    padding: 40px 20px 28px;
+    padding: 48px 28px 32px;
   }
   .cta-banner {
-    margin: 0 20px 40px;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 16px;
+    margin: 0 28px 48px;
   }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .produtos {
+    padding: 36px 16px 24px;
+  }
+
   .produtos-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
+  }
+
+  /* SEARCH */
+  .produtos-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .candy-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+
+  .cta-banner {
+    margin: 0 16px 40px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 16px;
+    padding: 24px 20px;
   }
 }
