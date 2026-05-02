@@ -28,6 +28,7 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
             {cat}
           </button>
         ))}
+        
         {/* Botão de pedido menu mobile */}
         <a
           href="https://wa.me/5551993463155"
@@ -40,7 +41,6 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
       </div>
 
       <div className="navbar-right">
-        <a href="https://www.instagram.com/chicamontezano/" target="_blank"><i class="fa fa-instagram"></i></a>
         <span className="navbar-phone">📞 (51) 99346-3155</span>
         <a
           href="https://wa.me/5551993463155"

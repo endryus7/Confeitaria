@@ -34,15 +34,20 @@
 
 .candy-tag {
   position: absolute;
-  top: 10px; left: 10px;
+  top: 10px;
+  left: 10px;
   background: rgba(61, 15, 30, 0.82);
   color: #fce4ec;
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  padding: 3px 9px;
-  border-radius: 12px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 20px);
 }
 
 .candy-body {
@@ -50,7 +55,7 @@
 }
 
 .candy-name {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.05rem;
   font-weight: 700;
   font-style: italic;
@@ -73,14 +78,14 @@
 }
 
 .candy-price {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: #6b2737;
 }
 
 .candy-price small {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   margin-right: 1px;
@@ -95,11 +100,41 @@
   font-size: 0.78rem;
   font-weight: 800;
   cursor: pointer;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   transition: all 0.2s;
 }
 
 .candy-btn:hover {
   background: #25d366;
   color: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .candy-img-wrap {
+    height: 140px;
+  }
+
+  .candy-tag {
+    font-size: 0.5rem;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .candy-name {
+    font-size: 0.95rem;
+  }
+
+  .candy-desc {
+    font-size: 0.72rem;
+  }
+
+  .candy-price {
+    font-size: 1.05rem;
+  }
+
+  .candy-btn {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+  }
 }
