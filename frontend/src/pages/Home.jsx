@@ -5,7 +5,7 @@ import Topbar from "../components/Topbar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import CandyCard from "../components/CandyCard";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/Searchbar";
 import Footer from "../components/Footer";
 
 const WHATSAPP = "5551993463155";
