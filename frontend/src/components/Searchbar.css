@@ -18,7 +18,7 @@
   padding: 10px 40px 10px 40px;
   border: 2px solid #fce4ec;
   border-radius: 50px;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
   color: #3d0f1e;
@@ -60,5 +60,7 @@
 }
 
 @media (max-width: 768px) {
-  .search-wrap { max-width: 100%; }
+  .search-wrap {
+    max-width: 100%;
+  }
 }
