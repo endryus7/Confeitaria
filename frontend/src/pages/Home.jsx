@@ -17,7 +17,7 @@ export default function DocesPaixao() {
     : candies.filter(c => c.category === activeCategory);
 
   function handlePedir(nomeDoDoce) {
-    const msg = `Olá Chica! Gostaria de fazer um pedido de *${nomeDoDoce}* 🍬`;
+    const msg = `Olá Chica! Gostaria de fazer um pedido de ${nomeDoDoce}`;
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
   }
 
