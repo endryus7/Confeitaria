@@ -5,7 +5,7 @@ import Topbar from "../components/Topbar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import CandyCard from "../components/CandyCard";
-import Searchbar from "../components/Searchbar";
+import SearchBar from "../components/Searchbar";
 import Pagination from "../components/Pagination";
 import Footer from "../components/Footer";
 
