@@ -1,11 +1,11 @@
-import brigadeiro from "../assets/images/brigadeiro.jpg"
-import beijinho from '../assets/images/beijinho.jpg'
-import branquinho from '../assets/images/branquinho.jpg'
-import Ovos_de_colher from "../assets/images/Ovos_de_colher.jpeg";
-import Bolo_de_laranja from "../assets/images/Bolo_de_laranja.png";
-import Bolo_de_chocolate from "../assets/images/Bolo_de_chocolate.jpeg";
-import Trufas from "../assets/images/Trufas.jpeg";
-import Ovo_de_colher_morango from "../assets/images/Ovo_de_colher_morango.jpeg"
+import Brigadeiro from "../assets/images/Brigadeiro01.jpg"
+import Beijinho from '../assets/images/Brigadeiro02.jpeg'
+import Branquinho from '../assets/images/Brigadeiro04.png'
+import Ovos_de_colher from "../assets/images/Ovos_de_colher01.jpeg";
+import Bolo_de_laranja from "../assets/images/Bolo01.jpeg";
+import Bolo_de_chocolate from "../assets/images/Bolo02.jpeg";
+import Trufas from "../assets/images/Trufas01.jpeg";
+import Ovo_de_colher_morango from "../assets/images/Ovo_de_colher03.jpeg"
 
 export const categories = [
   "Todos",
@@ -20,7 +20,7 @@ export const candies = [
     id: 1,
     name: "Brigadeiro",
     price: 3.5,
-    image: brigadeiro,
+    image: Brigadeiro,
     category: "Brigadeiros Tradicionais",
     desc: "Clássico com chocolate e granulado",
   },
@@ -28,7 +28,7 @@ export const candies = [
     id: 2,
     name: "Beijinho",
     price: 3.5,
-    image: beijinho,
+    image: Beijinho,
     category: "Brigadeiros Tradicionais",
     desc: "Coco ralado com leite condensado",
   },
@@ -36,7 +36,7 @@ export const candies = [
     id: 3,
     name: "Branquinho",
     price: 3.5,
-    image: branquinho,
+    image: Branquinho,
     category: "Brigadeiros Tradicionais",
     desc: "Clássico com leite condensado",
   },
@@ -106,6 +106,148 @@ export const candies = [
   },
   {
     id: 12,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 13,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 14,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 15,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 16,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 17,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 18,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 19,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 20,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },{
+    id: 21,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 22,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 23,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 24,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 25,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 26,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 27,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },{
+    id: 28,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 29,
+    name: "Churros",
+    price: 8.0,
+    image: "",
+    category: "Sobremesas",
+    desc: "Crocante com doce de leite",
+  },
+  {
+    id: 30,
     name: "Churros",
     price: 8.0,
     image: "",

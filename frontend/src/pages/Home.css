@@ -94,6 +94,10 @@
   margin-bottom: 16px;
 }
 
+.pagination-info {
+  margin-bottom: 0.5rem;
+}
+
 .empty-search {
   text-align: center;
   padding: 60px 20px;

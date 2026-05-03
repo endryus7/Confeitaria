@@ -21,6 +21,7 @@
 .footer-logo {
   width: 130px;
   height: auto;
+  margin-left: 1.8em;
   object-fit: contain;
   filter: brightness(1.05);
 }
@@ -83,6 +84,10 @@
 @media (max-width: 480px) {
   .footer-top {
     gap: 15px;
+  }
+
+  .footer-logo {
+    margin-left: 0;
   }
 
   .btn-footer .btn-whats {
