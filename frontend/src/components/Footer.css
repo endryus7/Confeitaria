@@ -86,6 +86,10 @@
     gap: 15px;
   }
 
+  .footer-logo {
+    margin-left: 0;
+  }
+
   .btn-footer .btn-whats {
     padding: 10px 8px;
     font-size: 0.8rem;

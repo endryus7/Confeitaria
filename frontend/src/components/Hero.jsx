@@ -1,5 +1,5 @@
 import Bolo_de_kitkat from "../assets/images/Bolo_de_kitkat01.jpeg";
-import Branquinho_com_nutela from "../assets/images/Branquinho_com_nutela.png"
+import Branquinho_com_nutela from "../assets/images/Brigadeiro11.png"
 import "./Hero.css";
 
 const WHATSAPP = "5551993463155";
