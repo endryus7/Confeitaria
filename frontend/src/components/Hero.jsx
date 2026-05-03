@@ -1,4 +1,4 @@
-import Bolo_de_kitkat from "../assets/images/Bolo_de_kitkat.jpeg";
+import Bolo_de_kitkat from "../assets/images/Bolo_de_kitkat01.jpeg";
 import Branquinho_com_nutela from "../assets/images/Branquinho_com_nutela.png"
 import "./Hero.css";
 

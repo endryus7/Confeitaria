@@ -1,6 +1,6 @@
-import brigadeiro from "../assets/images/brigadeiro.jpg"
-import beijinho from '../assets/images/beijinho.jpg'
-import branquinho from '../assets/images/branquinho.jpg'
+import Brigadeiro from "../assets/images/Brigadeiro.jpg"
+import Beijinho from '../assets/images/Beijinho.jpg'
+import Branquinho from '../assets/images/Branquinho.jpg'
 import Ovos_de_colher from "../assets/images/Ovos_de_colher.jpeg";
 import Bolo_de_laranja from "../assets/images/Bolo_de_laranja.png";
 import Bolo_de_chocolate from "../assets/images/Bolo_de_chocolate.jpeg";
@@ -20,7 +20,7 @@ export const candies = [
     id: 1,
     name: "Brigadeiro",
     price: 3.5,
-    image: brigadeiro,
+    image: Brigadeiro,
     category: "Brigadeiros Tradicionais",
     desc: "Clássico com chocolate e granulado",
   },
@@ -28,7 +28,7 @@ export const candies = [
     id: 2,
     name: "Beijinho",
     price: 3.5,
-    image: beijinho,
+    image: Beijinho,
     category: "Brigadeiros Tradicionais",
     desc: "Coco ralado com leite condensado",
   },
@@ -36,7 +36,7 @@ export const candies = [
     id: 3,
     name: "Branquinho",
     price: 3.5,
-    image: branquinho,
+    image: Branquinho,
     category: "Brigadeiros Tradicionais",
     desc: "Clássico com leite condensado",
   },
