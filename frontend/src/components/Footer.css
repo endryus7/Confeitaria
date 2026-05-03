@@ -21,6 +21,7 @@
 .footer-logo {
   width: 130px;
   height: auto;
+  margin-left: 1.8em;
   object-fit: contain;
   filter: brightness(1.05);
 }
