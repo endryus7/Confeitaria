@@ -73,7 +73,6 @@ import Ovo_de_colher23 from "../assets/images/Ovo_de_colher23.jpeg"
 import Ovo_de_colher24 from "../assets/images/Ovo_de_colher24.jpeg"
 import Ovo_de_colher25 from "../assets/images/Ovo_de_colher25.jpeg"
 import Ovo_de_colher26 from "../assets/images/Ovo_de_colher26.jpeg"
-import Ovo_de_colher27 from "../assets/images/Ovo_de_colher27.jpeg"
 // Ovos de colher (3 unidades)
 import Ovos_de_colher01 from "../assets/images/Ovo_de_colher01.jpeg"
 import Ovos_de_colher02 from "../assets/images/Ovo_de_colher02.jpeg"
@@ -147,7 +146,7 @@ export const categories = [
   "Bolos da vovó",
   "Páscoa",
   "Tortas",
-  "Choclates diversos",
+  "Chocolates diversos",
   "Cucas",
   "Pães",
 ];
@@ -323,14 +322,6 @@ export const candies = [
   },
   {
     id: 22,
-    name: "Branquinho",
-    price: 3.5,
-    image: Brigadeiro20,
-    category: "Brigadeiros Tradicionais",
-    desc: "Clássico com leite condensado",
-  },
-  {
-    id: 23,
     name: "Bolo de Chocolate",
     price: 12.0,
     image: Bolo_de_chocolate,
@@ -338,7 +329,7 @@ export const candies = [
     desc: "Pudim de leite condensado caramelado",
   },
   {
-    id: 24,
+    id: 23,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo_de_laranja,
@@ -346,7 +337,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 25,
+    id: 24,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo01,
@@ -354,7 +345,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 26,
+    id: 25,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo02,
@@ -362,7 +353,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 27,
+    id: 26,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo03,
@@ -370,7 +361,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 28,
+    id: 27,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo04,
@@ -378,7 +369,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 29,
+    id: 28,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo05,
@@ -386,7 +377,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 30,
+    id: 29,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo06,
@@ -394,7 +385,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 31,
+    id: 30,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo07,
@@ -402,7 +393,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 32,
+    id: 31,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo08,
@@ -410,7 +401,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 33,
+    id: 32,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo09,
@@ -418,7 +409,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 34,
+    id: 33,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo10,
@@ -426,7 +417,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 35,
+    id: 34,
     name: "Bolo de Lranja",
     price: 18.0,
     image: Bolo11,
@@ -434,7 +425,7 @@ export const candies = [
     desc: "Com cobertura de ",
   },
   {
-    id: 36,
+    id: 35,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher01,
@@ -442,7 +433,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 37,
+    id: 36,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher02,
@@ -450,7 +441,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 38,
+    id: 37,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher03,
@@ -458,7 +449,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 39,
+    id: 38,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher04,
@@ -466,7 +457,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 40,
+    id: 39,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher05,
@@ -474,7 +465,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 41,
+    id: 40,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher06,
@@ -482,7 +473,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 42,
+    id: 41,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher07,
@@ -490,14 +481,14 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 43,
+    id: 42,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher08,
     category: "Páscoa",
     desc: "Franceses com recheios variados",
   },{
-    id: 44,
+    id: 43,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher09,
@@ -506,7 +497,7 @@ export const candies = [
   },
 
   {
-    id: 45,
+    id: 44,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher10,
@@ -514,7 +505,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 46,
+    id: 45,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher11,
@@ -522,7 +513,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 47,
+    id: 46,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher12,
@@ -531,7 +522,7 @@ export const candies = [
   },
 
   {
-    id: 48,
+    id: 47,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher13,
@@ -539,7 +530,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 49,
+    id: 48,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher14,
@@ -547,7 +538,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 50,
+    id: 49,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher15,
@@ -555,7 +546,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 51,
+    id: 50,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher16,
@@ -563,7 +554,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 52,
+    id: 51,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher17,
@@ -571,14 +562,14 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 53,
+    id: 52,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher18,
     category: "Páscoa",
     desc: "Franceses com recheios variados",
   },{
-    id: 54,
+    id: 53,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher19,
@@ -586,7 +577,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 55,
+    id: 54,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher20,
@@ -594,7 +585,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 56,
+    id: 55,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher21,
@@ -602,7 +593,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 57,
+    id: 56,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher22,
@@ -610,7 +601,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 58,
+    id: 57,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher23,
@@ -618,7 +609,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 59,
+    id: 58,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher24,
@@ -626,7 +617,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 60,
+    id: 59,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher25,
@@ -634,7 +625,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 61,
+    id: 60,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_colher26,
@@ -642,15 +633,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 62,
-    name: "Macarons",
-    price: 7.0,
-    image: Ovo_de_colher27,
-    category: "Páscoa",
-    desc: "Franceses com recheios variados",
-  },
-  {
-    id: 63,
+    id: 61,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_pascoa01,
@@ -658,7 +641,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 64,
+    id: 62,
     name: "Macarons",
     price: 7.0,
     image: Ovo_de_pascoa02,
@@ -666,7 +649,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 65,
+    id: 63,
     name: "Macarons",
     price: 7.0,
     image: Bunda_de_coelho,
@@ -674,7 +657,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 66,
+    id: 64,
     name: "Macarons",
     price: 7.0,
     image: Controle_de_pascoa01,
@@ -682,7 +665,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 67,
+    id: 65,
     name: "Macarons",
     price: 7.0,
     image: Controle_de_pascoa02,
@@ -690,7 +673,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 68,
+    id: 66,
     name: "Macarons",
     price: 7.0,
     image: Controle_de_pascoa03,
@@ -698,7 +681,7 @@ export const candies = [
     desc: "Franceses com recheios variados",
   },
   {
-    id: 37,
+    id: 67,
     name: "Trufa",
     price: 6.0,
     image: Trufas,
