@@ -1,11 +1,15 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 10px 10px;
+  justify-content: space-between;
+  padding: 8px 20px;
   background: #fff;
   border-bottom: 1px solid #fce4ec;
   position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(107, 39, 55, 0.06);
+  gap: 12px;
 }
 
 /* Logo */
@@ -14,19 +18,76 @@
   width: auto;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
-/* Links (desktop) */
+/* Wrapper com fade nas bordas */
+.navbar-links-wrap {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Fade esquerda */
+.navbar-links-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32px;
+  background: linear-gradient(to right, #fff, transparent);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Fade direita */
+.navbar-links-wrap::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  background: linear-gradient(to left, #fff, transparent);
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+/* Quando rola, aparece esquerda */
+.navbar-links-wrap.scrolled::before {
+  opacity: 1;
+}
+
+/* Quando chega no fim, some direita */
+.navbar-links-wrap.at-end::after {
+  opacity: 0;
+}
+
+/* Scroll horizontal */
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 4px 20px 4px 0; 
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.navbar-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-cat {
   background: none;
   border: none;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: #888;
@@ -34,6 +95,8 @@
   cursor: pointer;
   border-radius: 20px;
   transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-cat:hover {
@@ -47,10 +110,12 @@
   font-weight: 800;
 }
 
+/* Direita */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 7px;
+  flex-shrink: 0;
 }
 
 .navbar-phone {
@@ -71,6 +136,7 @@
   transition: all 0.2s;
   white-space: nowrap;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .navbar-btn:hover {
@@ -78,79 +144,51 @@
   color: #fff;
 }
 
-/* Hamburguer */
 .navbar-hamburger {
   display: none;
-  background: none;
-  border: 2px solid #fce4ec;
-  border-radius: 8px;
-  width: 40px;
-  height: 40px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  color: #6b2737;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.2s;
 }
 
-.navbar-hamburger:hover {
-  background: #fce4ec;
+.mobile-only {
+  display: none;
 }
 
-/* mobile / desktop */
-.mobile-only { display: none; }
-.desktop-only { display: inline-block; }
+.desktop-only {
+  display: inline-block;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 8px 16px;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .navbar-logo-img {
+    height: 56px;
+  }
+}
 
 /* MOBILE */
-@media (max-width: 780px) {
+@media (max-width: 600px) {
   .navbar {
-    padding: 10px 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 0;
+    padding: 6px 12px;
+    gap: 8px;
   }
 
-  .navbar-hamburger {
-    display: flex;
-  }
-  
-  .navbar-right {
-    display: none;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 4px;
-    padding: 12px 0 8px;
-    border-top: 1px solid #fce4ec;
-    margin-top: 8px;
-  }
-
-  .navbar-links.open {
-    display: flex;
+  .navbar-logo-img {
+    height: 48px;
   }
 
   .nav-cat {
-    text-align: left;
-    padding: 12px 16px;
-    border-radius: 10px;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    padding: 6px 10px;
   }
 
-  .mobile-only {
-    display: block;
-    margin: 4px 0 0;
-    text-align: center;
-    padding: 12px;
-    border-radius: 10px;
-  }
-
-  .desktop-only {
-    display: none;
+  .navbar-btn {
+    padding: 7px 12px;
+    font-size: 0.72rem;
   }
 }

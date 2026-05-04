@@ -146,7 +146,7 @@ export const categories = [
   "Bolos da vovó",
   "Páscoa",
   "Tortas",
-  "Choclates diversos",
+  "Chocolates diversos",
   "Cucas",
   "Pães",
 ];

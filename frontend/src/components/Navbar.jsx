@@ -1,13 +1,16 @@
-import { useState } from "react";
 import logo from "../assets/images/logo_chica.png";
 import "./Navbar.css";
 
 export default function Navbar({ categories, activeCategory, onCategoryChange }) {
-  const [menuOpen, setMenuOpen] = useState(false);
 
   function handleCat(cat) {
     onCategoryChange(cat);
-    setMenuOpen(false);
+
+    // Scroll automático para o cardápio ao clicar numa categoria
+    const cardapio = document.getElementById("cardapio");
+    if (cardapio) {
+      cardapio.scrollIntoView({ behavior: "smooth" });
+    }
   }
 
   return (
@@ -17,8 +20,8 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
         <img src={logo} alt="Chica Doçuras" className="navbar-logo-img" />
       </div>
 
-      {/* Links */}
-      <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
+      {/* Categorias com scroll horizontal */}
+      <div className="navbar-links">
         {categories.map(cat => (
           <button
             key={cat}
@@ -28,16 +31,6 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
             {cat}
           </button>
         ))}
-        
-        {/* Botão de pedido menu mobile */}
-        <a
-          href="https://wa.me/5551993463155"
-          target="_blank"
-          rel="noreferrer"
-          className="navbar-btn mobile-only"
-        >
-          📲 Fazer Pedido
-        </a>
       </div>
 
       <div className="navbar-right">
@@ -51,15 +44,6 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
           Fazer Pedido
         </a>
       </div>
-
-      {/* Botão hamburguer */}
-      <button
-        className="navbar-hamburger"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Menu"
-      >
-        {menuOpen ? "✕" : "☰"}
-      </button>
 
     </nav>
   );

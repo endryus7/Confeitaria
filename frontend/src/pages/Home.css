@@ -54,11 +54,22 @@
 /* Controls */
 .produtos-controls {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 20px;
-  flex-wrap: wrap;
+}
+
+.controls-top {
+  display: flex;
+  align-items: center;
+}
+
+.controls-bottom {
+  width: 100%;
+}
+
+.controls-bottom .search-wrap {
+  max-width: 100%;
 }
 
 .cats-row {
@@ -79,6 +90,8 @@
   cursor: pointer;
   font-family: "Nunito", sans-serif;
   transition: all 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .cat-pill:hover,
@@ -158,6 +171,18 @@
   .cta-banner {
     margin: 0 28px 48px;
   }
+
+  .cats-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .cats-row::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* MOBILE */
@@ -172,7 +197,6 @@
     gap: 10px;
   }
 
-  /* SEARCH */
   .produtos-controls {
     flex-direction: column;
     align-items: stretch;
@@ -189,5 +213,13 @@
     text-align: center;
     border-radius: 16px;
     padding: 24px 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 400px) {
+  .candy-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 }
