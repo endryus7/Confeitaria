@@ -31,10 +31,10 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
   function scrollCatIntoCenter(btn) {
     const container = linksRef.current;
     if (!container || !btn) return;
-    // Centraliza o botão clicado dentro do scroll
-    const btnLeft    = btn.offsetLeft;
-    const btnWidth   = btn.offsetWidth;
-    const centerPos  = btnLeft - (container.clientWidth / 2) + (btnWidth / 2);
+    const containerRect = container.getBoundingClientRect();
+    const btnRect       = btn.getBoundingClientRect();
+    const offset        = btnRect.left - containerRect.left;
+    const centerPos     = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
     container.scrollTo({ left: centerPos, behavior: "smooth" });
   }
 
@@ -42,7 +42,7 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
     onCategoryChange(cat);
     scrollCatIntoCenter(e.currentTarget);
 
-    // Scroll automático para o cardápio ao clicar numa categoria
+    // Scroll automático 
     const cardapio = document.getElementById("cardapio");
     if (cardapio) {
       cardapio.scrollIntoView({ behavior: "smooth" });
