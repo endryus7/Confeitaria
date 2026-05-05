@@ -72,11 +72,19 @@
   max-width: 100%;
 }
 
+/* Pills com scroll horizontal */
 .cats-row {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  padding: 4px 8px 8px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   flex: 1;
+}
+
+.cats-row::-webkit-scrollbar {
+  display: none;
 }
 
 .cat-pill {
@@ -171,18 +179,6 @@
   .cta-banner {
     margin: 0 28px 48px;
   }
-
-  .cats-row {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 4px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .cats-row::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 /* MOBILE */
@@ -216,7 +212,7 @@
   }
 }
 
-/* MOBILE */
+/* MOBILE PEQUENO */
 @media (max-width: 400px) {
   .candy-grid {
     grid-template-columns: 1fr 1fr;

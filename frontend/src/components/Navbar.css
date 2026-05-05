@@ -21,7 +21,7 @@
   flex-shrink: 0;
 }
 
-/* Wrapper com fade nas bordas */
+/* Wrapper */
 .navbar-links-wrap {
   position: relative;
   flex: 1;
@@ -50,20 +50,18 @@
   right: 0;
   top: 0;
   bottom: 0;
-  width: 48px;
-  background: linear-gradient(to left, #fff, transparent);
+  width: 60px;
+  background: linear-gradient(to left, #fff 40%, transparent);
   z-index: 2;
   pointer-events: none;
   opacity: 1;
   transition: opacity 0.2s;
 }
 
-/* Quando rola, aparece esquerda */
 .navbar-links-wrap.scrolled::before {
   opacity: 1;
 }
 
-/* Quando chega no fim, some direita */
 .navbar-links-wrap.at-end::after {
   opacity: 0;
 }
@@ -74,7 +72,7 @@
   align-items: center;
   gap: 4px;
   overflow-x: auto;
-  padding: 4px 20px 4px 0; 
+  padding: 4px 8px;
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
