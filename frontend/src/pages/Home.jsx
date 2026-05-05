@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Home.css";
 import { candies, categories } from "../data/candies";
 import Topbar from "../components/Topbar";
@@ -16,6 +16,7 @@ export default function Home() {
   const [activeCategory, setActiveCategory] = useState("Todos");
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const catsRowRef = useRef(null); // pills do cardápio
 
   // Filtra categoria e pesquisa ao mesmo tempo
   const filtered = candies.filter(candy => {
@@ -25,9 +26,19 @@ export default function Home() {
   });
 
   // Calcula páginas
-  const totalPages   = Math.ceil(filtered.length / ITEMS_POR_PAGINA);
-  const startIndex   = (currentPage - 1) * ITEMS_POR_PAGINA;
-  const paginados    = filtered.slice(startIndex, startIndex + ITEMS_POR_PAGINA);
+  const totalPages = Math.ceil(filtered.length / ITEMS_POR_PAGINA);
+  const startIndex = (currentPage - 1) * ITEMS_POR_PAGINA;
+  const paginados  = filtered.slice(startIndex, startIndex + ITEMS_POR_PAGINA);
+
+  function scrollPillIntoCenter(btn) {
+    const container = catsRowRef.current;
+    if (!container || !btn) return;
+    const containerRect = container.getBoundingClientRect();
+    const btnRect       = btn.getBoundingClientRect();
+    const offset        = btnRect.left - containerRect.left;
+    const centerPos     = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
+    container.scrollTo({ left: centerPos, behavior: "smooth" });
+  }
 
   function handlePedir(nomeDoDoce) {
     const msg = `Olá Chica! Gostaria de fazer um pedido de ${nomeDoDoce}`;
@@ -41,11 +52,12 @@ export default function Home() {
     document.getElementById("cardapio").scrollIntoView({ behavior: "smooth" });
   }
 
-  // Limpa a pesquisa
-  function handleCategoria(cat) {
+  // Limpa a pesquisa 
+  function handleCategoria(cat, e) {
     setActiveCategory(cat);
     setSearch(""); // Reseta search
     setCurrentPage(1); // volta para página 1 ao trocar categoria
+    if (e) scrollPillIntoCenter(e.currentTarget);
   }
 
   function handleSearch(value) {
@@ -66,7 +78,7 @@ export default function Home() {
       <Navbar
         categories={categories}
         activeCategory={activeCategory}
-        onCategoryChange={handleCategoria}
+        onCategoryChange={(cat) => handleCategoria(cat)}
       />
 
       <Hero />
@@ -84,18 +96,23 @@ export default function Home() {
 
         {/* Filtros + barra de pesquisa */}
         <div className="produtos-controls">
-          <div className="cats-row">
-            {categories.map(cat => (
-              <button
-                key={cat}
-                className={activeCategory === cat ? "cat-pill active" : "cat-pill"}
-                onClick={() => handleCategoria(cat)}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="controls-top">
+            <div className="cats-row" ref={catsRowRef}>
+              {categories.map(cat => (
+                <button
+                  key={cat}
+                  className={activeCategory === cat ? "cat-pill active" : "cat-pill"}
+                  onClick={(e) => handleCategoria(cat, e)}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
-          <Searchbar value={search} onChange={handleSearch} />
+
+          <div className="controls-bottom">
+            <Searchbar value={search} onChange={handleSearch} />
+          </div>
         </div>
 
         {/* Resultado da pesquisa */}
