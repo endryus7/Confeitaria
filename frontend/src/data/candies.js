@@ -35,13 +35,13 @@ import Copinho_de_mms from "../assets/images/Doces_finos14.jpeg"
 import Copinho_decorado from "../assets/images/Doces_finos15.jpeg"
 
 // Cupcakes
-import Cupcake_azul from "../assets/images/Cupcake01.jpeg"
-import Cupcake_com_tag01 from "../assets/images/Cupcake02.jpeg"
-import Cupcake_com_tag02 from "../assets/images/Cupcake03.jpeg"
-import Cupcake_com_tag03 from "../assets/images/Cupcake04.jpeg"
-import Cupcake_com_tag04 from "../assets/images/Cupcake05.jpeg"
-import Cupcake_frozen from "../assets/images/Cupcake06.jpeg"
-import Cupcake_com_tag05 from "../assets/images/Cupcake07.jpeg"
+import Cupcake_azul from "../assets/images/cupcake01.jpeg"
+import Cupcake_com_tag01 from "../assets/images/cupcake02.jpeg"
+import Cupcake_com_tag02 from "../assets/images/cupcake03.jpeg"
+import Cupcake_com_tag03 from "../assets/images/cupcake04.jpeg"
+import Cupcake_com_tag04 from "../assets/images/cupcake05.jpeg"
+import Cupcake_frozen from "../assets/images/cupcake06.jpeg"
+import Cupcake_com_tag05 from "../assets/images/cupcake07.jpeg"
 
 // Sobremesas
 import Banoffe from "../assets/images/Sobremesa01.jpeg"
