@@ -138,3 +138,43 @@
     font-size: 0.72rem;
   }
 }
+
+/* MOBILE */
+@media (max-width: 350px) {
+  .candy-img-wrap {
+    height: 140px;
+  }
+
+  .candy-tag {
+    font-size: 0.5rem;
+    padding: 2px 7px;
+    letter-spacing: 0.5px;
+  }
+
+  .candy-body {
+    padding: 0.4rem;
+  }
+
+  .candy-name {
+    font-size: 0.95rem;
+  }
+
+  .candy-desc {
+    font-size: 0.72rem;
+  }
+
+  .candy-price {
+    font-size: 1rem;
+    
+  }
+
+  .candy-footer {
+    gap: 5px;
+  }
+
+  .candy-btn {
+    padding: 6px 12px;
+    font-size: 0.72rem;
+  }
+}
+

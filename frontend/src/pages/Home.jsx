@@ -161,7 +161,7 @@ export default function Home() {
       <div className="cta-banner">
         <div className="cta-banner-text">
           <strong>Encomendas para festas e eventos 🎉</strong>
-          <span>Entre em contato e faça seu pedido personalizado</span>
+          <span>Entre em contato e faça seu pedido.</span>
         </div>
         <a
           href={`https://wa.me/${WHATSAPP}`}
