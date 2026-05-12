@@ -206,7 +206,7 @@ export const candies = [
   },
   {
     id: 5,
-    name: "Branquinho de Nozes",
+    name: "Nozes",
     price: 248.00,
     image: Brigadeiro_nozes,
     category: "Brigadeiros Tradicionais",
@@ -214,7 +214,7 @@ export const candies = [
   },
   {
     id: 6,
-    name: "Branquinho de Granule",
+    name: "Brigadeiro de Granule",
     price: 178.00,
     image: Brigadeiro_granule,
     category: "Brigadeiros Tradicionais",
@@ -278,7 +278,7 @@ export const candies = [
   },
   {
     id: 14,
-    name: "Brigadeiro de Sereja",
+    name: "Brigadeiro de Cereja",
     price: 185.00,
     image: Brigadeiro_sereja,
     category: "Brigadeiros Tradicionais",
@@ -584,7 +584,7 @@ export const candies = [
   },
   {
     id: 54,
-    name: "Bolo de Chocolate",
+    name: "Torta de Chocolate",
     price: 115.00,
     image: Bolo_de_chocolate,
     category: "Tortas",
@@ -592,7 +592,7 @@ export const candies = [
   },
   {
     id: 55,
-    name: "Bolo de Lranja",
+    name: "Torta de Morango com Chocolate",
     price: 385.00,
     image: Bolo_de_morango_com_chocolate,
     category: "Tortas",
@@ -600,7 +600,7 @@ export const candies = [
   },
   {
     id: 56,
-    name: "Bolo de Batizado",
+    name: "Torta de Batizado",
     price: 100.00,
     image: Bolo_batizado,
     category: "Tortas",
@@ -616,15 +616,15 @@ export const candies = [
   },
   {
     id: 58,
-    name: "Bolo Patrulha Canina",
+    name: "Torta Patrulha Canina",
     price: 295.00,
     image: Bolo_patrulha_canina,
-    category: "Páscoa",
+    category: "Tortas",
     desc: "50 Fatias",
   },
   {
     id: 59,
-    name: "Bolo de Chocolate com Nata e Bombom",
+    name: "Torta de Chocolate com Nata e Bombom",
     price: 385.00,
     image: Bolo_chocolate_com_bombom,
     category: "Tortas",
@@ -632,7 +632,7 @@ export const candies = [
   },
   {
     id: 60,
-    name: "Bolo de Casamento",
+    name: "Torta de Casamento",
     price: 268.00,
     image: Bolo_de_casamento,
     category: "Tortas",
@@ -640,7 +640,7 @@ export const candies = [
   },
   {
     id: 61,
-    name: "Bolo Minnie",
+    name: "Torta Minnie",
     price: 310.00,
     image: Bolo_minnie,
     category: "Tortas",
@@ -648,7 +648,7 @@ export const candies = [
   },
   {
     id: 62,
-    name: "Bolo de Nata com Morango",
+    name: "Torta de Nata com Morango",
     price: 385.00,
     image: Bolo_nata_com_morango,
     category: "Tortas",
@@ -664,14 +664,14 @@ export const candies = [
   },
   {
     id: 64,
-    name: "Bolo com Barrinhas de Chocolate",
+    name: "Torta com Barrinhas de Chocolate",
     price: 248.00,
     image: Bolo_com_barrinhas_de_chocolate,
     category: "Páscoa",
     desc: "30 Fatias",
   },{
     id: 65,
-    name: "Bolo do Inter",
+    name: "Torta do Inter",
     price: 155.00,
     image: Bolo_inter01,
     category: "Tortas",
@@ -679,7 +679,7 @@ export const candies = [
   },
   {
     id: 66,
-    name: "Bolo skol",
+    name: "Torta skol",
     price: 155.00,
     image: Bolo_skol,
     category: "Tortas",
@@ -687,7 +687,7 @@ export const candies = [
   },
   {
     id: 67,
-    name: "Bolo Princesa",
+    name: "Torta Princesa",
     price: 205.00,
     image: Bolo_princesa,
     category: "Tortas",
@@ -695,7 +695,7 @@ export const candies = [
   },
   {
     id: 68,
-    name: "Bolo arco íris",
+    name: "Torta arco íris",
     price: 190.00,
     image: Bolo_arco_iris,
     category: "Tortas",
@@ -704,7 +704,7 @@ export const candies = [
 
   {
     id: 69,
-    name: "Bolo do Inter",
+    name: "Torta do Inter",
     price: 295.00,
     image: Bolo_inter02,
     category: "Tortas",
@@ -720,7 +720,7 @@ export const candies = [
   },
   {
     id: 71,
-    name: "Bolo Lego",
+    name: "Torta Lego",
     price: 198.00,
     image: Bolo_lego,
     category: "Tortas",
@@ -728,7 +728,7 @@ export const candies = [
   },
   {
     id: 72,
-    name: "Bolo Mundo Bita",
+    name: "Torta Mundo Bita",
     price: 295.00,
     image: Bolo_mundo_bita,
     category: "Tortas",
@@ -736,7 +736,7 @@ export const candies = [
   },
   {
     id: 73,
-    name: "Bolo Make",
+    name: "Torta Make",
     price: 155.00,
     image: Bolo_make,
     category: "Tortas",
@@ -744,14 +744,14 @@ export const candies = [
   },
   {
     id: 74,
-    name: "Bolo Call Of Duty",
+    name: "Torta Call Of Duty",
     price: 215.00,
     image: Bolo_call_of_duty,
     category: "Tortas",
     desc: "30 Fatias",
   },{
     id: 75,
-    name: "Bolo do Gremio",
+    name: "Torta do Gremio",
     price: 295.00,
     image: Bolo_gremio,
     category: "Páscoa",
@@ -759,7 +759,7 @@ export const candies = [
   },
   {
     id: 76,
-    name: "Bolo de Kitkat Negrinho, Branquinho e Morango",
+    name: "Torta de Kitkat Negrinho, Branquinho e Morango",
     price: 350.00,
     image: Bolo_de_kitkat_negrinho_e_branquinho_e_morangos,
     category: "Tortas",
@@ -767,7 +767,7 @@ export const candies = [
   },
   {
     id: 77,
-    name: "Bolo de Kitkat de Doces",
+    name: "Torta de Kitkat de Doces",
     price: 250.00,
     image: Bolo_de_kitkat_doces,
     category: "Tortas",
@@ -775,7 +775,7 @@ export const candies = [
   },
   {
     id: 78,
-    name: "Bolo de Kitkat Negrinho e Branquinho",
+    name: "Torta de Kitkat Negrinho e Branquinho",
     price: 295.00,
     image: Bolo_de_kitkat_negrinho_e_branquinho,
     category: "Tortas",
@@ -783,7 +783,7 @@ export const candies = [
   },
   {
     id: 79,
-    name: "Bolo de Kitkat Duo",
+    name: "Torta de Kitkat Duo",
     price: 350.00,
     image: Bolo_de_kitkat_duo,
     category: "Tortas",

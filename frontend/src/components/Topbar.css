@@ -12,3 +12,12 @@
   color: #6b2737;
   letter-spacing: 0.3px;
 }
+
+/* MOBILE */
+@media (max-width: 360px) {
+  .topbar {
+    padding: 6px 30px;
+  }
+}
+
+

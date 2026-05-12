@@ -198,3 +198,16 @@
     font-size: 0.72rem;
   }
 }
+
+/* MOBILE */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 8px 10px;
+    gap: 0px;
+  }
+
+  .navbar-btn {
+    padding: 5px;
+  }
+}
+

@@ -96,3 +96,18 @@
   }
 
 }
+
+/* MOBILE */
+@media (max-width: 360px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    place-items: center
+  }
+
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+}
+
