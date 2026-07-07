@@ -64,7 +64,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2026 Chica Doçuras. Todos os direitos reservados. Feito com 🍓 amor.</p>
+        <p>© 2026 Chica Doçuras. Todos os direitos reservados.</p>
       </div>
     </footer>
   );
