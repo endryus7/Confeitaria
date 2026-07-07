@@ -7,6 +7,7 @@ import Hero from "../components/Hero";
 import CandyCard from "../components/CandyCard";
 import Searchbar from "../components/Searchbar";
 import Pagination from "../components/Pagination";
+import WhatsappFloat from "../components/WhatsappFloat"
 import Footer from "../components/Footer";
 
 const WHATSAPP = "5551993463155";
@@ -172,6 +173,8 @@ export default function Home() {
           📲 Chamar no WhatsApp
         </a>
       </div>
+
+      <WhatsappFloat />
 
       <Footer />
     </div>
