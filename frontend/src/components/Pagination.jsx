@@ -1,3 +1,4 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./Pagination.css";
 
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
@@ -38,8 +39,9 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         className="page-btn page-arrow"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
+        aria-label="Página anterior"
       >
-        ‹
+        <ChevronLeft size={18} strokeWidth={2.4} />
       </button>
 
       {/* Números */}
@@ -62,8 +64,9 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         className="page-btn page-arrow"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
+        aria-label="Próxima página"
       >
-        ›
+        <ChevronRight size={18} strokeWidth={2.4} />
       </button>
 
     </div>

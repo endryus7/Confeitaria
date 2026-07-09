@@ -1,9 +1,10 @@
+import { Search, X } from "lucide-react";
 import "./Searchbar.css"
 
 export default function SearchBar({ value, onChange }) {
   return (
     <div className="search-wrap">
-      <span className="search-icon">🔍</span>
+      <Search className="search-icon" size={17} strokeWidth={2.2} />
       <input
         type="text"
         className="search-input"
@@ -12,8 +13,8 @@ export default function SearchBar({ value, onChange }) {
         onChange={(e) => onChange(e.target.value)}
       />
       {value && (
-        <button className="search-clear" onClick={() => onChange("")}>
-          ✕
+        <button className="search-clear" onClick={() => onChange("")} aria-label="Limpar pesquisa">
+          <X size={13} strokeWidth={2.8} />
         </button>
       )}
     </div>

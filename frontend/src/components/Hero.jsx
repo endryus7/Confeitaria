@@ -1,5 +1,6 @@
 import Bolo_de_kitkat from "../assets/images/Bolo_de_kitkat01.jpeg";
 import Branquinho_com_nutela from "../assets/images/Brigadeiro11.png"
+import { Sparkles, MessageCircle } from "lucide-react";
 import "./Hero.css";
 
 const WHATSAPP = "5551993463155";
@@ -20,8 +21,7 @@ export default function Hero() {
         <div className="hero-deco-c3" />
       </div>
 
-      <div className="hero-content">
-        <div className="hero-tag">✨ Doces Caseiros Artesanais</div>
+      <div className="hero-content fade-in-up">
         <h1 className="hero-title">
           Feitos com<br />
           <span>Amor ❤️</span>
@@ -31,11 +31,11 @@ export default function Hero() {
           direto da nossa cozinha pra sua festa
         </p>
         <button className="hero-cta" onClick={handlePedir}>
-          📲 Pedir pelo WhatsApp
+          <MessageCircle size={17} strokeWidth={2.2} /> Pedir pelo WhatsApp
         </button>
       </div>
 
-      <div className="hero-photos">
+      <div className="hero-photos fade-in-up" style={{ animationDelay: "0.15s" }}>
         <div className="hero-photo-main">
           <img
             src={Bolo_de_kitkat}

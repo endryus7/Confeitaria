@@ -1,12 +1,15 @@
 import { useState, useRef } from "react";
+import { Candy, MessageCircle } from "lucide-react";
 import "./Home.css";
 import { candies, categories } from "../data/candies";
 import Topbar from "../components/Topbar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import TrustBar from "../components/Trustbar";
 import CandyCard from "../components/CandyCard";
 import Searchbar from "../components/Searchbar";
 import Pagination from "../components/Pagination";
+import WhatsappFloat from "../components/WhatsappFloat"
 import Footer from "../components/Footer";
 
 const WHATSAPP = "5551993463155";
@@ -28,15 +31,15 @@ export default function Home() {
   // Calcula páginas
   const totalPages = Math.ceil(filtered.length / ITEMS_POR_PAGINA);
   const startIndex = (currentPage - 1) * ITEMS_POR_PAGINA;
-  const paginados  = filtered.slice(startIndex, startIndex + ITEMS_POR_PAGINA);
+  const paginados = filtered.slice(startIndex, startIndex + ITEMS_POR_PAGINA);
 
   function scrollPillIntoCenter(btn) {
     const container = catsRowRef.current;
     if (!container || !btn) return;
     const containerRect = container.getBoundingClientRect();
-    const btnRect       = btn.getBoundingClientRect();
-    const offset        = btnRect.left - containerRect.left;
-    const centerPos     = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
+    const btnRect = btn.getBoundingClientRect();
+    const offset = btnRect.left - containerRect.left;
+    const centerPos = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
     container.scrollTo({ left: centerPos, behavior: "smooth" });
   }
 
@@ -82,6 +85,8 @@ export default function Home() {
       />
 
       <Hero />
+
+      <TrustBar />
 
       <section className="produtos" id="cardapio">
         <div className="produtos-header">
@@ -141,7 +146,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="empty-search">
-            <span>🍬</span>
+            <Candy size={44} strokeWidth={1.5} color="#f9a8c0" />
             <p>Nenhum doce encontrado.</p>
             <button className="cat-pill" onClick={handleVerTodos}>
               Ver todos os doces
@@ -169,9 +174,11 @@ export default function Home() {
           rel="noreferrer"
           className="btn-whats"
         >
-          📲 Chamar no WhatsApp
+          <MessageCircle size={16} strokeWidth={2.2} /> Fazer Encomenda
         </a>
       </div>
+
+      <WhatsappFloat />
 
       <Footer />
     </div>

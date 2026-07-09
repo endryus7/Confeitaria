@@ -64,19 +64,6 @@
   padding-left: 0;
 }
 
-.hero-tag {
-  display: inline-block;
-  background: rgba(107, 39, 55, 0.12);
-  color: #6b2737;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  padding: 5px 14px;
-  border-radius: 20px;
-  margin-bottom: 14px;
-  border: 1px solid rgba(107, 39, 55, 0.2);
-}
-
 .hero-title {
   font-family: "Playfair Display", serif;
   font-size: clamp(2.2rem, 5vw, 3.4rem);
