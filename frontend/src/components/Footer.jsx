@@ -1,4 +1,5 @@
 import logo from "../assets/images/logo_chica.png";
+import { MessageCircle, Instagram, MapPin, Phone } from "lucide-react";
 import "./Footer.css";
 
 const WHATSAPP = "5551993463155";
@@ -45,19 +46,19 @@ export default function Footer() {
           <ul>
             <li>
               <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">
-                <i className="fa fa-whatsapp"></i> WhatsApp
+                <MessageCircle size={16} strokeWidth={2} /> WhatsApp
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/chicamontezano/" target="_blank" rel="noreferrer">
-                <i className="fa fa-instagram"></i> @chicamontezano
+                <Instagram size={16} strokeWidth={2} /> @chicamontezano
               </a>
             </li>
             <li>
-              <i className="fa fa-map-marker"></i> Porto Alegre, RS
+              <MapPin size={16} strokeWidth={2} /> Porto Alegre, RS
             </li>
             <li>
-              <i className="fa fa-phone"></i> (51) 99346-3155
+              <Phone size={16} strokeWidth={2} /> (51) 99346-3155
             </li>
           </ul>
         </div>
