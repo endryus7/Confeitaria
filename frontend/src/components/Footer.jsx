@@ -46,19 +46,19 @@ export default function Footer() {
           <ul>
             <li>
               <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer">
-                <MessageCircle size={16} strokeWidth={2} /> WhatsApp
+                <span className="footer-icon-chip"><MessageCircle size={14} strokeWidth={2.2} /></span> WhatsApp
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/chicamontezano/" target="_blank" rel="noreferrer">
-                <Instagram size={16} strokeWidth={2} /> @chicamontezano
+                <span className="footer-icon-chip"><Instagram size={14} strokeWidth={2.2} /></span> @chicamontezano
               </a>
             </li>
             <li>
-              <MapPin size={16} strokeWidth={2} /> Porto Alegre, RS
+              <span className="footer-icon-chip"><MapPin size={14} strokeWidth={2.2} /></span> Porto Alegre, RS
             </li>
             <li>
-              <Phone size={16} strokeWidth={2} /> (51) 99346-3155
+              <span className="footer-icon-chip"><Phone size={14} strokeWidth={2.2} /></span> (51) 99346-3155
             </li>
           </ul>
         </div>

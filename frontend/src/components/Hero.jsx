@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="hero-deco-c3" />
       </div>
 
-      <div className="hero-content">
+      <div className="hero-content fade-in-up">
         <h1 className="hero-title">
           Feitos com<br />
           <span>Amor ❤️</span>
@@ -35,7 +35,7 @@ export default function Hero() {
         </button>
       </div>
 
-      <div className="hero-photos">
+      <div className="hero-photos fade-in-up" style={{ animationDelay: "0.15s" }}>
         <div className="hero-photo-main">
           <img
             src={Bolo_de_kitkat}

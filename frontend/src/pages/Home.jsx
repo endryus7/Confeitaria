@@ -5,6 +5,7 @@ import { candies, categories } from "../data/candies";
 import Topbar from "../components/Topbar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import TrustBar from "../components/TrustBar";
 import CandyCard from "../components/CandyCard";
 import Searchbar from "../components/Searchbar";
 import Pagination from "../components/Pagination";
@@ -30,15 +31,15 @@ export default function Home() {
   // Calcula páginas
   const totalPages = Math.ceil(filtered.length / ITEMS_POR_PAGINA);
   const startIndex = (currentPage - 1) * ITEMS_POR_PAGINA;
-  const paginados  = filtered.slice(startIndex, startIndex + ITEMS_POR_PAGINA);
+  const paginados = filtered.slice(startIndex, startIndex + ITEMS_POR_PAGINA);
 
   function scrollPillIntoCenter(btn) {
     const container = catsRowRef.current;
     if (!container || !btn) return;
     const containerRect = container.getBoundingClientRect();
-    const btnRect       = btn.getBoundingClientRect();
-    const offset        = btnRect.left - containerRect.left;
-    const centerPos     = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
+    const btnRect = btn.getBoundingClientRect();
+    const offset = btnRect.left - containerRect.left;
+    const centerPos = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
     container.scrollTo({ left: centerPos, behavior: "smooth" });
   }
 
@@ -84,6 +85,8 @@ export default function Home() {
       />
 
       <Hero />
+
+      <TrustBar />
 
       <section className="produtos" id="cardapio">
         <div className="produtos-header">
@@ -171,7 +174,7 @@ export default function Home() {
           rel="noreferrer"
           className="btn-whats"
         >
-          <MessageCircle size={16} strokeWidth={2.2} /> Chamar no WhatsApp
+          <MessageCircle size={16} strokeWidth={2.2} /> Fazer Encomenda
         </a>
       </div>
 
