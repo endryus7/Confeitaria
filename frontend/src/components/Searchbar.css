@@ -9,8 +9,9 @@
 .search-icon {
   position: absolute;
   left: 14px;
-  font-size: 0.9rem;
+  color: #d4a0b0;
   pointer-events: none;
+  display: flex;
 }
 
 .search-input {

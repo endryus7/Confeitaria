@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Phone } from "lucide-react";
 import logo from "../assets/images/logo_chica.png";
 import "./Navbar.css";
 
@@ -9,9 +10,9 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
     const container = linksRef.current;
     if (!container || !btn) return;
     const containerRect = container.getBoundingClientRect();
-    const btnRect       = btn.getBoundingClientRect();
-    const offset        = btnRect.left - containerRect.left;
-    const centerPos     = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
+    const btnRect = btn.getBoundingClientRect();
+    const offset = btnRect.left - containerRect.left;
+    const centerPos = container.scrollLeft + offset - (container.clientWidth / 2) + (btnRect.width / 2);
     container.scrollTo({ left: centerPos, behavior: "smooth" });
   }
 
@@ -35,7 +36,9 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
           <img src={logo} alt="Chica Doçuras" className="navbar-logo-img" />
         </div>
         <div className="navbar-right">
-          <span className="navbar-phone">📞 (51) 99346-3155</span>
+          <span className="navbar-phone">
+            <Phone size={14} strokeWidth={2.2} /> (51) 99346-3155
+          </span>
           <a
             href="https://wa.me/5551993463155"
             target="_blank"
