@@ -22,7 +22,6 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="hero-tag"><Sparkles size={13} strokeWidth={2.3} /> Doces Caseiros Artesanais</div>
         <h1 className="hero-title">
           Feitos com<br />
           <span>Amor ❤️</span>
