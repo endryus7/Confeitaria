@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Candy, MessageCircle } from "lucide-react";
 import "./Home.css";
 import { candies, categories } from "../data/candies";
 import Topbar from "../components/Topbar";
@@ -142,7 +143,7 @@ export default function Home() {
           </div>
         ) : (
           <div className="empty-search">
-            <span>🍬</span>
+            <Candy size={44} strokeWidth={1.5} color="#f9a8c0" />
             <p>Nenhum doce encontrado.</p>
             <button className="cat-pill" onClick={handleVerTodos}>
               Ver todos os doces
@@ -170,7 +171,7 @@ export default function Home() {
           rel="noreferrer"
           className="btn-whats"
         >
-          📲 Chamar no WhatsApp
+          <MessageCircle size={16} strokeWidth={2.2} /> Chamar no WhatsApp
         </a>
       </div>
 
