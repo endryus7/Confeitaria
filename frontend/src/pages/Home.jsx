@@ -5,7 +5,7 @@ import { candies, categories } from "../data/candies";
 import Topbar from "../components/Topbar";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import TrustBar from "../components/TrustBar";
+import TrustBar from "../components/Trustbar";
 import CandyCard from "../components/CandyCard";
 import Searchbar from "../components/Searchbar";
 import Pagination from "../components/Pagination";

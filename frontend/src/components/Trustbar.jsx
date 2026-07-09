@@ -1,5 +1,5 @@
 import { Heart, Clock, PackageCheck } from "lucide-react";
-import "./TrustBar.css";
+import "./Trustbar.css";
 
 const items = [
   { icon: Heart, label: "Feito à mão", desc: "com ingredientes selecionados" },
