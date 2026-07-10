@@ -12,7 +12,7 @@
 
 ## Tecnologias
 
-React · JavaScript · CSS3 · Vite
+React · JavaScript · CSS3 · Lucide React · Vite
 
 ---
 
