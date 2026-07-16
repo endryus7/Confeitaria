@@ -1,6 +1,7 @@
 import { Heart, Clock, PackageCheck } from "lucide-react";
 import "./Trustbar.css";
 
+// Guardar os dados num array, adicionar/remover itens.
 const items = [
   { icon: Heart, label: "Feito à mão", desc: "com ingredientes selecionados" },
   { icon: Clock, label: "Sob encomenda", desc: "5 dias de antecedência" },

@@ -15,6 +15,7 @@ const cardapioLinks = [
 
 export default function Footer() {
 
+  // Rola até a seção de cardápio
   function irParaCardapio() {
     const cardapio = document.getElementById("cardapio");
     if (cardapio) cardapio.scrollIntoView({ behavior: "smooth" });
