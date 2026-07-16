@@ -6,6 +6,7 @@ import "./Hero.css";
 const WHATSAPP = "5551993463155";
 
 export default function Hero() {
+  // Abre o WhatsApp em nova aba já com uma mensagem
   function handlePedir() {
     const msg = "Olá Chica! Gostaria de fazer um pedido ";
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
@@ -13,8 +14,10 @@ export default function Hero() {
 
   return (
     <section className="hero">
+      {/* Fundo com gradiente rosa */}
       <div className="hero-bg" />
 
+      {/* Círculos por cima do fundo */}
       <div className="hero-deco">
         <div className="hero-deco-c1" />
         <div className="hero-deco-c2" />
@@ -35,11 +38,13 @@ export default function Hero() {
         </button>
       </div>
 
+      {/* 2 Fotos circulares, com animação com atraso */}
       <div className="hero-photos fade-in-up" style={{ animationDelay: "0.15s" }}>
         <div className="hero-photo-main">
           <img
             src={Bolo_de_kitkat}
             alt="Doces da Chica"
+            // Se a imagem falhar ao carregar, esconde o img e coloca um fundo rosa no lugar
             onError={(e) => {
               e.target.style.display = "none";
               e.target.parentElement.style.background = "linear-gradient(135deg, #f9a8c0, #e8799a)";

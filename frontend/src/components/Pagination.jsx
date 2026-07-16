@@ -1,7 +1,13 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import "./Pagination.css";
 
+
+// currentPage: número da página atual
+// totalPages: total de páginas
+// onPageChange: função chamada quando o usuário clica em outro número/seta
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
+
+  // 1 página ou nenhuma, não mostra paginação
   if (totalPages <= 1) return null;
 
   // Gera os números de página visíveis
@@ -34,7 +40,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
   return (
     <div className="pagination">
 
-      {/* Botão anterior */}
+      {/* Botão anterior, desativado quando já está na página 1 */}
       <button
         className="page-btn page-arrow"
         onClick={() => onPageChange(currentPage - 1)}
@@ -44,9 +50,10 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         <ChevronLeft size={18} strokeWidth={2.4} />
       </button>
 
-      {/* Números */}
+      {/* Números de página */}
       {getPages().map((page, index) =>
         page === "..." ? (
+          // "..." indicador visual
           <span key={`dots-${index}`} className="page-dots">...</span>
         ) : (
           <button
@@ -59,7 +66,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         )
       )}
 
-      {/* Botão próximo */}
+      {/* Botão próxima página, desativado se for última página */}
       <button
         className="page-btn page-arrow"
         onClick={() => onPageChange(currentPage + 1)}

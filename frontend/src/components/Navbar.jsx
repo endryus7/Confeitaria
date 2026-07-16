@@ -4,8 +4,10 @@ import logo from "../assets/images/logo_chica.png";
 import "./Navbar.css";
 
 export default function Navbar({ categories, activeCategory, onCategoryChange }) {
+  // Referência a div que tem os botões de categoria, usada para controlar a rolagem horizontal da lista.
   const linksRef = useRef(null);
 
+  // Rola a lista de categorias até que o botão clicado fique centralizado,
   function scrollCatIntoCenter(btn) {
     const container = linksRef.current;
     if (!container || !btn) return;
@@ -16,6 +18,7 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
     container.scrollTo({ left: centerPos, behavior: "smooth" });
   }
 
+  // centraliza o botão clicado e rola a página até a seção de cardápio.
   function handleCat(cat, e) {
     onCategoryChange(cat);
     scrollCatIntoCenter(e.currentTarget);
@@ -30,7 +33,7 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
   return (
     <nav className="navbar">
 
-      {/* Linha 1: marca */}
+      {/* Linha 1: logo + telefone + botão de pedido */}
       <div className="navbar-top">
         <div className="navbar-logo">
           <img src={logo} alt="Chica Doçuras" className="navbar-logo-img" />
@@ -50,13 +53,14 @@ export default function Navbar({ categories, activeCategory, onCategoryChange })
         </div>
       </div>
 
-      {/* Linha 2: categorias */}
+      {/* Linha 2: lista de categorias (rolável horizontalmente) */}
       <div className="navbar-cats-bar">
         <div className="navbar-links-wrap">
           <div className="navbar-links" ref={linksRef}>
             {categories.map(cat => (
               <button
                 key={cat}
+                // Adiciona a classe "active" só no botão da categoria selecionada
                 className={activeCategory === cat ? "nav-cat active" : "nav-cat"}
                 onClick={(e) => handleCat(cat, e)}
               >

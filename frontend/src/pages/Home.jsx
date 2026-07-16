@@ -13,26 +13,29 @@ import WhatsappFloat from "../components/WhatsappFloat"
 import Footer from "../components/Footer";
 
 const WHATSAPP = "5551993463155";
-const ITEMS_POR_PAGINA = 20;
+const ITEMS_POR_PAGINA = 20; // quantidade de doces por página
 
 export default function Home() {
-  const [activeCategory, setActiveCategory] = useState("Todos");
-  const [search, setSearch] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
+  const [activeCategory, setActiveCategory] = useState("Todos"); // categoria selecionada no filtro
+  const [search, setSearch] = useState(""); // texto digitado na busca
+  const [currentPage, setCurrentPage] = useState(1); // página atual da listagem
   const catsRowRef = useRef(null); // pills do cardápio
 
   // Filtra categoria e pesquisa ao mesmo tempo
+  // "Todos" ignora o filtro de categoria;
   const filtered = candies.filter(candy => {
     const matchCategoria = activeCategory === "Todos" || candy.category === activeCategory;
     const matchPesquisa  = candy.name.toLowerCase().includes(search.toLowerCase());
     return matchCategoria && matchPesquisa;
   });
 
-  // Calcula páginas
+  // calcula quantas páginas existem
   const totalPages = Math.ceil(filtered.length / ITEMS_POR_PAGINA);
   const startIndex = (currentPage - 1) * ITEMS_POR_PAGINA;
   const paginados = filtered.slice(startIndex, startIndex + ITEMS_POR_PAGINA);
 
+  // Rola horizontalmente a lista de categorias (pills) até centralizar
+  // nem todas as categorias cabem na largura da tela.
   function scrollPillIntoCenter(btn) {
     const container = catsRowRef.current;
     if (!container || !btn) return;
@@ -43,11 +46,13 @@ export default function Home() {
     container.scrollTo({ left: centerPos, behavior: "smooth" });
   }
 
+  // Abre o WhatsApp com uma mensagem pronta, incluindo o nome do doce pedido.
   function handlePedir(nomeDoDoce) {
     const msg = `Olá Chica! Gostaria de fazer um pedido de ${nomeDoDoce}`;
     window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
   }
 
+  // Ver todos reseta todos os filtros e volta para o topo
   function handleVerTodos() {
     setActiveCategory("Todos");
     setSearch("");
@@ -63,11 +68,13 @@ export default function Home() {
     if (e) scrollPillIntoCenter(e.currentTarget);
   }
 
+  // Atualiza o texto de pesquisa e sempre volta para a página 1
   function handleSearch(value) {
     setSearch(value);
     setCurrentPage(1); // volta para página 1 ao pesquisar
   }
 
+  // Troca de página na paginação e rola até o topo do cardápio
   function handlePageChange(page) {
     setCurrentPage(page);
     // Rolagem suave
@@ -88,6 +95,7 @@ export default function Home() {
 
       <TrustBar />
 
+      {/* Cardápio de doces, com id */}
       <section className="produtos" id="cardapio">
         <div className="produtos-header">
           <div>
@@ -99,7 +107,7 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Filtros + barra de pesquisa */}
+        {/* Filtros (pills de categoria) + barra de pesquisa */}
         <div className="produtos-controls">
           <div className="controls-top">
             <div className="cats-row" ref={catsRowRef}>
@@ -120,7 +128,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Resultado da pesquisa */}
+        {/* Resultado da pesquisa (quantos resultados a pesquisa encontrou) */}
         {search && (
           <p className="search-result-info">
             {filtered.length === 0
@@ -130,14 +138,14 @@ export default function Home() {
           </p>
         )}
 
-        {/* Info paginação */}
+        {/* Info paginação (itens mostrados na página atual) */}
         {!search && filtered.length > 0 && (
           <p className="pagination-info">
             Mostrando {startIndex + 1}–{Math.min(startIndex + ITEMS_POR_PAGINA, filtered.length)} de {filtered.length} doces
           </p>
         )}
 
-        {/* Grid paginação */}
+        {/* Grid paginação, ou mensagem de "nada encontrado" */}
         {paginados.length > 0 ? (
           <div className="candy-grid">
             {paginados.map(candy => (
@@ -163,6 +171,7 @@ export default function Home() {
 
       </section>
 
+      {/* Encomendas de festas/eventos */}
       <div className="cta-banner">
         <div className="cta-banner-text">
           <strong>Encomendas para festas e eventos 🎉</strong>
