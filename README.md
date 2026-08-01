@@ -18,11 +18,11 @@ React · JavaScript · CSS3 · Lucide React · Vite
 
 ## Funcionalidades
 
-- 🍬 Catálogo completo de doces caseiros artesanais
-- 🔍 Busca por nome do produto
-- 🏷️ Filtro por categoria
-- 📲 Pedido direto pelo WhatsApp com um clique
-- 📱 Design responsivo com foco em mobile
+-  Catálogo completo de doces caseiros artesanais
+-  Busca por nome do produto
+-  Filtro por categoria
+-  Pedido direto pelo WhatsApp com um clique
+-  Design responsivo com foco em mobile
 
 ---
 
